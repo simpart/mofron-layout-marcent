@@ -15,10 +15,10 @@ module.exports = class extends mofron.class.Layout {
      * @short
      * @type private
      */
-    constructor (p1) {
+    constructor (p1,p2) {
         try {
             super();
-            this.modname('marcent');
+            this.modname('Marcent');
 	    this.shortForm('top','rate');
 
 	    /* init config */
@@ -26,7 +26,7 @@ module.exports = class extends mofron.class.Layout {
             this.confmng().add('rate', { type: 'number', init:80 });
             
 	    if (0 < arguments.length) {
-                this.config(p1);
+                this.config(p1,p2);
 	    }
         } catch (e) {
             console.error(e.stack);
